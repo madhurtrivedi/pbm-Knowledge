@@ -1,0 +1,2 @@
+<h1>Claim</h1>
+<p>In the PBM domain, a claim is a request submitted by a pharmacy to get payment for a dispensed prescription drug. It contains key information such as member details, drug NDC, quantity, days supply, prescriber, pharmacy ID, and plan rules. The PBM system validates the claim against eligibility, formulary rules, pricing logic, copay/accumulator settings, and coverage restrictions to determine whether it is approved, rejected, or requires prior authorization.</p>
