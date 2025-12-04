@@ -86,6 +86,19 @@
 </ul>
 <p><strong>Navigation Path:</strong> <code>/pharmacies/[pharmacyId]/orders</code></p>
 
+<p>Order details can be viewed by clicking on each order. Following order details can be seen in this screen:</p>
+<ul>
+	<li>Order ID</li>
+	<li>Pharmacy ID</li>
+	<li>Customer</li>
+	<li>Total amount</li>
+	<li>STatus</li>
+	<li>Items</li>
+	<li>Payment Method</li>
+</ul>
+<p><strong>Navigation Path:</strong><code>/pharmacies/[pharmacyId]/orders/[orderId]</code></p>
+<p>Here Order Id is of pattern like ORD001</p>
+
 <hr />
 
 <h3>3.5 Reviews Tab</h3>
