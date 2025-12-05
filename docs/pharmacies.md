@@ -19,9 +19,12 @@
 <ul>
 	<li>Pharmacy ID (unique identifier)</li>
 	<li>Pharmacy name</li>
+	<li>Type(Retail, Hospital, Specialty, Government)</li>
+	<li>License Number</li>
+	<li>Status (Active or Inactive)</li>
 	<li>Address</li>
 	<li>Contact number</li>
-	<li>Status (Active or Inactive)</li>
+	<li>Last inspection date</li>
 </ul>
 <p>Selecting a pharmacy opens the Pharmacy Details view.</p>
 
@@ -30,6 +33,7 @@
 <h2>3. Pharmacy Details — Tabs Overview</h2>
 <p>A selected pharmacy’s details are divided into multiple tabs. Each tab has its own navigation path.</p>
 <p><strong>Base Path:</strong> <code>/pharmacies/[pharmacyId]/[tabName]</code></p>
+<p>Here Pharmacy Id is of pattern like PHM001</p>
 
 <hr />
 
@@ -43,6 +47,10 @@
 	<li>Email address</li>
 	<li>License/registration details</li>
 	<li>Status</li>
+	<li>Type</li>
+	<li>Ratings</li>
+	<li>Last Inspection</li>
+	<li>Established</li>
 </ul>
 <p><strong>Navigation Path:</strong> <code>/pharmacies/[pharmacyId]</code></p>
 
@@ -52,11 +60,12 @@
 <p><strong>Description:</strong> Shows the list of claims associated with the pharmacy.</p>
 <p><strong>Information for each claim:</strong></p>
 <ul>
-	<li>Claim number</li>
-	<li>Member name</li>
+	<li>Claim ID</li>
+	<li>Member ID</li>
 	<li>Service type</li>
 	<li>Status</li>
 	<li>Amount</li>
+	<li>Date</li>
 </ul>
 <p><strong>Navigation Path:</strong> <code>/pharmacies/[pharmacyId]/claims</code></p>
 
@@ -66,9 +75,11 @@
 <p><strong>Description:</strong> Displays the pharmacy’s inventory of medicines and products.</p>
 <p><strong>Information for each item:</strong></p>
 <ul>
+	<li>Item ID</li>
 	<li>Product name</li>
 	<li>Quantity available</li>
 	<li>Category</li>
+	<li>Status</li>
 	<li>Expiry date</li>
 </ul>
 <p><strong>Navigation Path:</strong> <code>/pharmacies/[pharmacyId]/inventory</code></p>
@@ -79,7 +90,9 @@
 <p><strong>Description:</strong> Lists orders placed with or by the pharmacy.</p>
 <p><strong>Information for each order:</strong></p>
 <ul>
-	<li>Order number</li>
+	<li>Order ID</li>
+	<li>Member ID</li>
+	<li>Items</li>
 	<li>Date</li>
 	<li>Status</li>
 	<li>Total amount</li>
@@ -90,11 +103,13 @@
 <ul>
 	<li>Order ID</li>
 	<li>Pharmacy ID</li>
-	<li>Customer</li>
+	<li>Member Name/ID</li>
+	<li>Payment method</li>
 	<li>Total amount</li>
-	<li>STatus</li>
+	<li>Status</li>
 	<li>Items</li>
-	<li>Payment Method</li>
+	<li>Order date</li>
+	<li>Delivery date</li>
 </ul>
 <p><strong>Navigation Path:</strong><code>/pharmacies/[pharmacyId]/orders/[orderId]</code></p>
 <p>Here Order Id is of pattern like ORD001</p>
