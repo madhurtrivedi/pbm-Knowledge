@@ -70,21 +70,22 @@
 <hr />
 
 <h3>3.3 Notes Tab</h3>
-<p><strong>Description:</strong> Displays internal notes and comments about the invoice.</p>
+<p><strong>Description:</strong> Displays the list of internal notes and comments about the invoice.</p>
+<p>Billing Notes contains Title, Author, Date, Priority and Status</p>
 
 <p><strong>Navigation Path:</strong> <code>/billing/[invoiceId]/notes</code></p>
 
 <hr />
 
 <h3>3.4 Adjustments Tab</h3>
-<p><strong>Description:</strong> Displays list of adjustments made to the invoice.</p>
+<p><strong>Description:</strong> Displays list of adjustments made to the invoice. Also called as Invoice Adjustments</p>
 
 <p><strong>Information for each adjustment:</strong></p>
 <ul>
   <li>Adjustment ID</li>
   <li>Adjustment type</li>
   <li>Amount adjusted</li>
-  <li>Reason</li>
+  <li>Status</li>
   <li>Date</li>
 </ul>
 
