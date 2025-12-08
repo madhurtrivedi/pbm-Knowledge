@@ -36,7 +36,7 @@
   <li><strong>Query Parameters:</strong>
     <ul>
       <li><code>memberId</code> (optional)</li>
-      <li><code>memberName</code> (optional)</li>
+      <li><code>memberName</code> (optiona, It is a person's name and not an id)</li>
     </ul>
   </li>
 </ul>
