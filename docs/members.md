@@ -8,7 +8,7 @@
 </p>
 
 <p><strong>Primary Unique Identifier:</strong> <code>memberId</code></p>
-<p>memberId is alphanumeric, without whitespace and have a pattern of MEM001</p>
+<p>memberId is alphanumeric, without whitespace and have a pattern of MEM001, It cannot be a person's name</p>
 
 <p><strong>Navigation Path:</strong> <code>/members</code></p>
 <p>Users can open the module through the left menu → <strong>Members</strong>.</p>
