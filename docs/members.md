@@ -15,15 +15,38 @@
 <hr />
 
 <h2>2. Members List</h2>
-<p>The Members list page displays the following details:</p>
+
+<p>The Members List page displays the following details:</p>
 <ul>
-  <li>Member ID (unique identifier)</li>
-  <li>Member name</li>
-  <li>Plan type</li>
-  <li>Eligibility</li>
-  <li>Status (Active or Inactive)</li>
+  <li><strong>Member ID</strong> (unique identifier)</li>
+  <li><strong>Member Name</strong></li>
+  <li><strong>Plan Type</strong></li>
+  <li><strong>Group</strong></li>
+  <li><strong>Status</strong> (Active or Inactive)</li>
 </ul>
+
 <p>Selecting a member opens the Member Details view.</p>
+
+<p><strong>Navigation Path:</strong> <code>/members</code></p>
+
+<p><strong>API Details:</strong></p>
+<ul>
+  <li><strong>URL:</strong> <code>GET /api/get-members</code></li>
+  <li><strong>Query Parameters:</strong>
+    <ul>
+      <li><code>memberId</code> (optional)</li>
+      <li><code>memberName</code> (optional)</li>
+    </ul>
+  </li>
+</ul>
+<p><strong>Description:</strong>  
+This API returns a filtered list of members:
+</p>
+<ul>
+  <li>If <code>memberId</code> is provided, it returns the exact matching member.</li>
+  <li>If <code>memberName</code> is provided, it may return multiple matching members.</li>
+</ul>
+
 
 <hr />
 
