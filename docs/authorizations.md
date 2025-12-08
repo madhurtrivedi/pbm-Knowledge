@@ -102,7 +102,7 @@
 
 <p><strong>Navigation Path:</strong> <code>/authorizations/[authId]</code> or <code>/authorizations/[authId]/details</code></p>
 
-<h4>Authorization Appeals</h4>
+<h4>3.1.1 Authorization Appeals</h4>
 <p><strong>Description:</strong> Shows the list of appeals associated with the authorization request.</p>
 <p><strong>Appeal information includes:</strong></p>
 <ul>
@@ -123,15 +123,15 @@
 
 <p><strong>Navigation Path:</strong> <code>/authorizations/[authId]/appeals</code></p>
 
-<h5>Appeal Detail</h5>
+<h5>3.1.1.1 Appeal Detail</h5>
 <p><strong>Description:</strong> Shows the details of the appeal like Appeal Id, Member name, Reason, Status, Priority.</p>
 <p><strong>Navigation Path:</strong> <code>/authorizations/[authId]/appeals/[appealId]</code></p>
 
-<h5>Appeal Reviews</h5>
+<h5>3.1.1.2 Appeal Reviews</h5>
 <p><strong>Description:</strong> Shows the reviews of the appeal like Review Id, Review by, Status, Comments.</p>
 <p><strong>Navigation Path:</strong> <code>/authorizations/[authId]/appeals/[appealId]</code></p>
 
-<h6>Appeal Review Detail</h6>
+<h6>3.1.1.2.1 Appeal Review Detail</h6>
 <p><strong>Description:</strong> Shows the details of a particular appeal, shows information like Review ID, Appeal ID, Authorization ID and By</p>
 <p><strong>Navigation Path:</strong> <code>/authorizations/[authId]/appeals/[appealId]/review/[reviewId]</code></p>
 
