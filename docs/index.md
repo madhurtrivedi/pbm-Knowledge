@@ -10,4 +10,5 @@
   <li><a href="providers">Providers</a></li>
   <li><a href="utilization">Utilization</a></li>
   <li><a href="billing">Billing</a></li>
+  <li><a href="pharmacies">Pharmacies</a></li>
 </ul>
