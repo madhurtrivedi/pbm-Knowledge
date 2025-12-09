@@ -19,13 +19,32 @@
 <ul>
   <li>Claim ID (unique identifier)</li>
   <li>Member name</li>
-  <li>Provider name</li>
   <li>Status (Approved, Pending, Denied, Under Review)</li>
   <li>Amount (total claim amount)</li>
-  <li>Service type</li>
-  <li>Submitted date</li>
 </ul>
 <p>Selecting a claim opens the Claim Details view.</p>
+
+<p><strong>Navigation Path:</strong> <code>/members</code></p>
+
+<p><strong>API Details:</strong></p>
+<ul>
+  <li><strong>URL:</strong> <code>GET /api/claims</code></li>
+  <li><strong>Query Parameters:</strong>
+    <ul>
+      <li><code>ids</code> (optional)</li>
+      <li><code>memberName</code> (optional, It is a person's name and not an id)</li>
+      <li><code>status</code> (optional)</li>
+    </ul>
+  </li>
+</ul>
+<p><strong>Description:</strong>  
+This API returns a filtered list of claims:
+</p>
+<ul>
+  <li>If <code>ids</code> is provided, it returns the exact matching list of ids in array</li>
+  <li>If <code>memberName</code> is provided, it may return multiple claims for memberName.</li>
+  <li>If <code>status</code> is provided, it may return claims based on status.</li>
+</ul>
 
 <hr />
 
