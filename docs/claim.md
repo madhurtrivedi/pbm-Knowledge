@@ -24,7 +24,7 @@
 </ul>
 <p>Selecting a claim opens the Claim Details view.</p>
 
-<p><strong>Navigation Path:</strong> <code>/members</code></p>
+<p><strong>Navigation Path:</strong> <code>/claims</code></p>
 
 <p><strong>API Details:</strong></p>
 <ul>
