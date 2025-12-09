@@ -28,7 +28,7 @@
 
 <p><strong>API Details:</strong></p>
 <ul>
-  <li><strong>URL:</strong> <code>GET /api/claims</code></li>
+  <li><strong>URL:</strong> <code>POST /api/claims</code></li>
   <li><strong>Query Parameters:</strong>
     <ul>
       <li><code>ids</code> (optional)</li>
