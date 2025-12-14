@@ -48,10 +48,63 @@ This API returns a filtered list of claims:
 
 <hr />
 
-<h2>3. Claim Details Page — Layout and Components</h2>
+<h2>3. Create Claim</h2>
+<p>The Create Claim page allows users to submit a new claim by entering member, provider, and prescription details.</p>
+
+<p>The following fields are captured on this page:</p>
+<ul>
+  <li>Member ID</li>
+  <li>Member Name</li>
+  <li>Date of Birth</li>
+  <li>Gender</li>
+  <li>Pharmacy Name</li>
+  <li>Group Number</li>
+  <li>Provider Name</li>
+  <li>Plan Type</li>
+  <li>NDC (National Drug Code)</li>
+  <li>Final Cost</li>
+</ul>
+
+<p>On successful submission, the claim is created and becomes available in the Claims List.</p>
+
+<p><strong>Navigation Path:</strong></p>
+<ul>
+  <li><code>/claims/createclaim</code></li>
+  <li><code>/claims/createclaim?memberId=&lt;memberId&gt;</code> (optional)</li>
+</ul>
+
+<p><strong>API Details:</strong></p>
+<ul>
+  <li><strong>URL:</strong> <code>POST /api/claims/create</code></li>
+  <li><strong>Request Body:</strong>
+    <ul>
+      <li><code>memberId</code> (required if not passed in route)</li>
+      <li><code>memberName</code> (required)</li>
+      <li><code>dateOfBirth</code> (required)</li>
+      <li><code>gender</code> (required)</li>
+      <li><code>pharmacyName</code> (required)</li>
+      <li><code>groupNumber</code> (required)</li>
+      <li><code>providerName</code> (required)</li>
+      <li><code>planType</code> (required)</li>
+      <li><code>ndc</code> (required)</li>
+      <li><code>finalCost</code> (required)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong>Description:</strong></p>
+<ul>
+  <li>If <code>memberId</code> is provided in the route, the Member ID field is pre-populated.</li>
+  <li>All required fields must be completed to submit the claim.</li>
+  <li>Upon successful creation, a unique Claim ID is generated.</li>
+</ul>
+
+<hr />
+
+<h2>4. Claim Details Page — Layout and Components</h2>
 <p>When a user navigates to a specific claim (e.g., <code>/claims/CLM001</code>), the page displays:</p>
 
-<h3>3.0 Claim Details Page Structure</h3>
+<h3>4.0 Claim Details Page Structure</h3>
 
 <p><strong>Header Section:</strong></p>
 <ul>
@@ -92,13 +145,13 @@ This API returns a filtered list of claims:
 
 <hr />
 
-<h2>4. Claim Details — Tabs Overview</h2>
+<h2>5. Claim Details — Tabs Overview</h2>
 <p>A selected claim's details are divided into multiple tabs. Each tab has its own navigation path.</p>
 <p><strong>Base Path:</strong> <code>/claims/[claimId]/[tabName]</code></p>
 
 <hr />
 
-<h3>4.1 Overview Tab</h3>
+<h3>5.1 Overview Tab</h3>
 <p><strong>Description:</strong> Displays comprehensive claim information in a detailed descriptions layout.</p>
 
 <p><strong>Page Layout:</strong></p>
@@ -145,7 +198,7 @@ This API returns a filtered list of claims:
 
 <hr />
 
-<h3>4.2 Attachments Tab</h3>
+<h3>5.2 Attachments Tab</h3>
 <p><strong>Description:</strong> Displays the list of documents and files attached to the claim.</p>
 
 <p><strong>Information for each attachment:</strong></p>
@@ -191,7 +244,7 @@ This API returns a filtered list of claims:
 
 <hr />
 
-<h3>4.3 Notes Tab</h3>
+<h3>5.3 Notes Tab</h3>
 <p><strong>Description:</strong> Displays internal notes, comments, and communication related to the claim.</p>
 
 <p><strong>Information for each note:</strong></p>
@@ -222,7 +275,7 @@ This API returns a filtered list of claims:
 
 <hr />
 
-<h3>4.4 History Tab</h3>
+<h3>5.4 History Tab</h3>
 <p><strong>Description:</strong> Displays chronological timeline of events and status changes for the claim.</p>
 
 <p><strong>Examples of history events:</strong></p>
@@ -241,7 +294,7 @@ This API returns a filtered list of claims:
 
 <hr />
 
-<h3>4.5 Adjudication Tab</h3>
+<h3>5.5 Adjudication Tab</h3>
 <p><strong>Description:</strong> Shows the adjudication process and decision details for the claim.</p>
 
 <p><strong>Information available:</strong></p>
@@ -264,7 +317,7 @@ This API returns a filtered list of claims:
 
 <hr />
 
-<h3>4.6 Audit Tab (within Attachments)</h3>
+<h3>5.6 Audit Tab (within Attachments)</h3>
 <p><strong>Description:</strong> Provides audit trail for attachment access and modifications.</p>
 
 <p><strong>Audit Trail Information:</strong></p>
@@ -282,7 +335,7 @@ This API returns a filtered list of claims:
 
 <hr />
 
-<h2>5. Claim Data Structure</h2>
+<h2>6. Claim Data Structure</h2>
 
 <p><strong>Core Claim Fields:</strong></p>
 <ul>
@@ -327,9 +380,9 @@ This API returns a filtered list of claims:
 
 <hr />
 
-<h2>6. Page Components and Layout</h2>
+<h2>7. Page Components and Layout</h2>
 
-<h3>6.1 Consistent Header Components</h3>
+<h3>7.1 Consistent Header Components</h3>
 <p>These components appear on all claim detail pages, regardless of which tab is active:</p>
 
 <p><strong>Breadcrumb Navigation:</strong></p>
@@ -386,7 +439,7 @@ This API returns a filtered list of claims:
 </ul>
 <p>Active tab is highlighted; clicking a tab navigates to that route.</p>
 
-<h3>6.2 Breadcrumb Component Details</h3>
+<h3>7.2 Breadcrumb Component Details</h3>
 <p>The breadcrumb automatically generates based on the URL path:</p>
 <ul>
   <li>Capitalizes each segment</li>
@@ -406,7 +459,7 @@ This API returns a filtered list of claims:
 
 <hr />
 
-<h2>7. User Actions and Features</h2>
+<h2>8. User Actions and Features</h2>
 
 <p><strong>Claim List Page:</strong></p>
 <ul>
@@ -430,7 +483,7 @@ This API returns a filtered list of claims:
 
 <hr />
 
-<h2>8. Summary of Routing Paths</h2>
+<h2>9. Summary of Routing Paths</h2>
 <table>
   <tr>
     <th>Feature</th>
@@ -480,7 +533,7 @@ This API returns a filtered list of claims:
 
 <hr />
 
-<h2>9. Related Modules</h2>
+<h2>10. Related Modules</h2>
 <p>The Claims module is interconnected with other modules in the system:</p>
 <ul>
   <li><strong>Members Module:</strong> Claims are associated with specific members. Users can navigate from a member's profile to view all their claims at <code>/members/[memberId]/claims</code></li>
@@ -492,9 +545,9 @@ This API returns a filtered list of claims:
 
 <hr />
 
-<h2>10. Key Features and Functionalities</h2>
+<h2>11. Key Features and Functionalities</h2>
 
-<h3>10.1 Claim Status Management</h3>
+<h3>11.1 Claim Status Management</h3>
 <p>Claims can have multiple statuses throughout their lifecycle:</p>
 <ul>
   <li><strong>Approved:</strong> Claim has been reviewed and approved for payment</li>
@@ -503,7 +556,7 @@ This API returns a filtered list of claims:
   <li><strong>Under Review:</strong> Claim is currently being processed</li>
 </ul>
 
-<h3>10.2 Financial Tracking</h3>
+<h3>11.2 Financial Tracking</h3>
 <p>Each claim includes comprehensive financial information:</p>
 <ul>
   <li>Total claim amount</li>
@@ -512,7 +565,7 @@ This API returns a filtered list of claims:
   <li>Processing progress indicator</li>
 </ul>
 
-<h3>10.3 Document Management</h3>
+<h3>11.3 Document Management</h3>
 <p>The attachments system allows:</p>
 <ul>
   <li>Multiple document uploads per claim</li>
@@ -521,7 +574,7 @@ This API returns a filtered list of claims:
   <li>Track who accessed or downloaded attachments</li>
 </ul>
 
-<h3>10.4 Communication and Notes</h3>
+<h3>11.4 Communication and Notes</h3>
 <p>The notes system enables:</p>
 <ul>
   <li>Internal team communication about claims</li>
@@ -530,7 +583,7 @@ This API returns a filtered list of claims:
   <li>Timestamped entries with author attribution</li>
 </ul>
 
-<h3>10.5 Audit and Compliance</h3>
+<h3>11.5 Audit and Compliance</h3>
 <p>Comprehensive audit trails for:</p>
 <ul>
   <li>Claim status changes</li>
