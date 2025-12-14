@@ -48,8 +48,8 @@ This API returns a filtered list of claims:
 
 <hr />
 
-<h2>3. Create Claim</h2>
-<p>The Create Claim page allows users to submit a new claim by entering member, provider, and prescription details.</p>
+<h2>3. Create Claim OR Raise a claim</h2>
+<p>The Create Claim or Raise claim page allows users to submit a new claim by entering member, provider, and prescription details.</p>
 
 <p>The following fields are captured on this page:</p>
 <ul>
